@@ -1,6 +1,6 @@
 import hashlib, requests 
 
-
+#URL for the HASH file 
 hash_request_url = 'http://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe.sha256'
 def main():
 
@@ -49,7 +49,11 @@ def download_installer():
         return file_content
  
 def installer_ok(installer_data, expected_sha256):
-    return
+    image_hash = hashlib.sha256(installer_data).hexdigest()
+    print(image_hash)
+   
+    
+    return 
 
 def save_installer(installer_data):
     return
